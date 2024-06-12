@@ -6,7 +6,7 @@ import './Dash.css'
 
 const Dash = ({localizacao, handleLocal}) => {
 
-    const chave = 'a1aac202a64668472fff5a3689bc4c61';
+    const chave = '422dd0943f1b06de9b1f9f987b803595';
     const [temp, setTemp] = useState();
     const [tempMin, setTempMin] = useState();
     const [tempMax, setTempMax] = useState();
@@ -15,7 +15,7 @@ const Dash = ({localizacao, handleLocal}) => {
 
     const handleKey = (e) =>{
         handleLocal(local)
-        const url = `https://api.openweathermap.org/data/2.5/forecast?q=S%C3%A3o%20Paulo&lang=pt_br&appid=a1aac202a64668472fff5a3689bc4c61&units=metric`;
+        const url = `https://api.openweathermap.org/data/2.5/forecast?q=S%C3%A3o%20Paulo&lang=pt_br&appid=422dd0943f1b06de9b1f9f987b803595&units=metric`;
         console.log(local)
         fetch(url)
         .then((resposta) => {
@@ -109,19 +109,6 @@ return (
 
             <div className="proximosDias">
                 <h3>Previsão para 5 dias</h3>
-
-                <div className="itens">
-                    {/* Parei por aqui, pegar codigo do lapa */}
-                    {/* {for (let i = 0; i <= 35; i + 8) {
-                        <h3>
-                        Amanhã
-                        <img src={logo} alt="" />
-                        <span>Temporal</span>
-                        <span> 26°c</span>
-                    </h3>
-                    }} */}
-                    
-            </div>
             </div>
         </div>
     </div>
